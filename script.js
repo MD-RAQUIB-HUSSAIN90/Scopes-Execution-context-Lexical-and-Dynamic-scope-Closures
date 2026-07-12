@@ -3,6 +3,7 @@
 // ii.  Execution context
 // iii. Lexical scope and dynamic scope
 // iv.  Closure
+// v.   Use cases: private counters, encapsulation
 
 //i. Scope - function scope, global scope, and block scope
 
@@ -60,3 +61,45 @@
 //  global pollution
 // how variable is stored in memory and how it is accessed in memoru ?
 //  ans -  variable is stored in memory in the form of key value pair and it is accessed in memory by using the key.
+
+// ye sach hai ki fnc ke khatm hone pe  aapka fnc and uske variables khtm ho jaate hai par  jab bhi closure banta hai to aapka fnc aur uske variables ka ek backlink banaya jata hai aur uske naam hote hai [[environment]]
+
+// example of closure
+
+// function countForMe() {
+//   let count = 0;
+//   return function () {
+//     count++;
+//     console.log(count);
+//   };
+// }
+// countForMe()(); // 1
+
+// let fnc = countForMe(); //
+// fnc(); // 1
+// fnc();
+
+//
+
+// Encapsulation - \
+
+// function clickLimiter() {
+//   //   this variable is in encapsulation
+//   let click = 0;
+//   return function () {
+//     if (click < 5) {
+//       click++;
+//       console.log(`You have clicked ${click} times`);
+//     } else {
+//       console.error("You have exceeded the limit of 5 clicks");
+//     }
+//   };
+// }
+
+// let clickHandler = clickLimiter();
+// clickHandler();
+// clickHandler();
+// clickHandler();
+// clickHandler();
+// clickHandler();
+// clickHandler();
