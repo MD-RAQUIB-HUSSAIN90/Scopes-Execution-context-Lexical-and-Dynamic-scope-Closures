@@ -200,3 +200,16 @@
 // let val=new Abcd()
 // console.log(val);
 
+ let obj={
+    name:"Arsh",
+    age:21,
+    sayName:function(){
+       
+        let defj=()=>{
+            console.log(this);
+            
+        }
+        return defj()
+    },
+ };
+ obj.sayName();
