@@ -104,33 +104,99 @@
 // clickHandler();
 // clickHandler();
 
-function createToaster(config) {
-  return function (str) {
-    let div = document.createElement("div");
-    div.textContent = str;
-    div.className = `inline-block ${config.theme === "dark" ? " bg-gray-800 text-white" : "bg-gray-100 text-black"} px-6 py-3 rounded shadow-lg pointer-events-none `;
+// function createToaster(config) {
+//   return function (str) {
+//     let div = document.createElement("div");
+//     div.textContent = str;
+//     div.className = `inline-block ${config.theme === "dark" ? " bg-gray-800 text-white" : "bg-gray-100 text-black"} px-6 py-3 rounded shadow-lg pointer-events-none `;
 
-    document.querySelector(".parent").appendChild(div);
+//     document.querySelector(".parent").appendChild(div);
 
-    if (config.positionX !== "left" || positionY !== "top") {
-      document.querySelector(".parent").className +=
-        `${config.positionX === "right" ? "right-5" : "left-5"}  ${config.positionY === "bottom" ? "bottom-5" : "top-5"}`;
-    }
+//     if (config.positionX !== "left" || positionY !== "top") {
+//       document.querySelector(".parent").className +=
+//         `${config.positionX === "right" ? "right-5" : "left-5"}  ${config.positionY === "bottom" ? "bottom-5" : "top-5"}`;
+//     }
 
-    setTimeout(() => {
-      document.querySelector(".parent").removeChild(div);
-    }, config.duration * 1000);
-  };
-}
+//     setTimeout(() => {
+//       document.querySelector(".parent").removeChild(div);
+//     }, config.duration * 1000);
+//   };
+// }
 
-let toaster = createToaster({
-  positionX: "right",
-  positionY: "bottom",
-  theme: "light",
-  duration: 3,
-});
+// let toaster = createToaster({
+//   positionX: "right",
+//   positionY: "bottom",
+//   theme: "light",
+//   duration: 3,
+// });
 
-toaster("Download Done");
-setTimeout(() => {
-  toaster("Arsh accepted your request");
-}, 2000);
+// toaster("Download Done");
+// setTimeout(() => {
+//   toaster("Arsh accepted your request");
+// }, 2000);
+//
+//
+//
+//
+//
+//
+//
+
+//  USE  OF "THIS" keyword
+// ye ek special keyword hai jo ki function ke andar use hota hai or ye function ke context ko refer karta hai.
+// aur alag alag scop  me alag alag use ho sakta hai
+
+// Global scoope me this keyword window object ko refer karta hai
+// console.log(this);  //--> Window {window: Window, self: Window, document: document, name: '', location: Location, …}
+
+// "this" keyword in Functions
+
+// function abcd() {
+//   console.log(this);
+// }
+
+// abcd();
+
+// function  aur global scop me this keyword window object ko refer karta hai
+//
+//
+//
+// "this" keyword in Methods (objects)
+// Object ke andar this keyword us object ko refer karta hai jiske andar ye function call ho raha hai
+// mtlb ki usi object ke andar ke properties ko access karta hai
+
+//  let obj={
+//     name:"Arsh",
+//     age:21,
+//     sayName:function(){
+//         console.log(this.age);
+//     },
+//  };
+//  obj.sayName();
+
+//
+//
+//
+// "This" keyword in  Event Handling
+// let h1=document.querySelector("h1");
+// h1.addEventListener("click",function(){
+//     console.log(this);
+
+// })
+
+// Arrow funtion ke sath  "this" window ko refers karta hai
+// jab ki  function Expretins ke sath us element ko refer karta hai jis par event laga hai
+
+// "this" keyword in Class
+// classes ke andar jab aap this keyword ko use karte ho to jab jab use karoge to ek blank object create hota hai jiske this ki value store ho jati hai
+
+// class Abcd {
+//   constructor() {
+//     console.log("heyy");
+//     this.a = 12;
+//   }
+// }
+
+// let val=new Abcd()
+// console.log(val);
+
