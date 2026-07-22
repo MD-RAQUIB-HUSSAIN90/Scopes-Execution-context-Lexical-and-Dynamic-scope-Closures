@@ -5,7 +5,7 @@
 // iv.  Closure
 // v.   Use cases: private counters, encapsulation
 
-//i. Scope - function scope, global scope, and block scope
+// i. Scope - function scope, global scope, and block scope
 
 // function testScope() {
 //   // function scope srf function ke andar hi use kiya ja sakta hai
@@ -32,7 +32,7 @@
 // }
 // abcd()(); // 10
 
-//Dynamic scope-   kaha se call kar rhe ho uspe depend kkarega ki  ky value milegi
+// Dynamic scope-   kaha se call kar rhe ho uspe depend kkarega ki  ky value milegi
 
 //  let a= 12;
 //  function abcd(){
@@ -79,7 +79,7 @@
 // fnc(); // 1
 // fnc();
 
-//
+
 
 // Encapsulation - \
 
@@ -134,13 +134,13 @@
 // setTimeout(() => {
 //   toaster("Arsh accepted your request");
 // }, 2000);
-//
-//
-//
-//
-//
-//
-//
+
+
+
+
+
+
+
 
 //  USE  OF "THIS" keyword
 // ye ek special keyword hai jo ki function ke andar use hota hai or ye function ke context ko refer karta hai.
@@ -158,9 +158,9 @@
 // abcd();
 
 // function  aur global scop me this keyword window object ko refer karta hai
-//
-//
-//
+
+
+
 // "this" keyword in Methods (objects)
 // Object ke andar this keyword us object ko refer karta hai jiske andar ye function call ho raha hai
 // mtlb ki usi object ke andar ke properties ko access karta hai
@@ -174,9 +174,9 @@
 //  };
 //  obj.sayName();
 
-//
-//
-//
+
+
+
 // "This" keyword in  Event Handling
 // let h1=document.querySelector("h1");
 // h1.addEventListener("click",function(){
@@ -200,16 +200,30 @@
 // let val=new Abcd()
 // console.log(val);
 
- let obj={
-    name:"Arsh",
-    age:21,
-    sayName:function(){
-       
-        let defj=()=>{
-            console.log(this);
-            
-        }
-        return defj()
-    },
- };
- obj.sayName();
+// let obj = {
+//   name: "Arsh",
+//   age: 21,
+//   sayName: function () {
+//     let defj = () => {
+//       console.log(this);
+//     };
+//     return defj();
+//   },
+// };
+// obj.sayName();
+// 
+// 
+// 
+// 
+// 
+//  variable access location of "this" according to  scops and value of "this"
+// global -> window
+// function -> window
+// mathod with Es5 eg(function(){}) ->object
+// method with Es6 ->window (when we use arrow functuion) instead of fucntion expretions
+// Es5 func inside Es5 method ->window
+// Arrow func  inside Es5 mehtod -> object
+// event handler -> element
+// class -> blank object
+
+// Note-> this keyword always take a value from thier parent function or mathods
