@@ -244,7 +244,6 @@ let photo = document.querySelector("#photo");
 const userMananger = {
   users: [],
   init: function () {
-    let a = 34;
     form.addEventListener("submit", this.submitForm.bind(this));
   },
   submitForm: function (e) {
@@ -259,9 +258,47 @@ const userMananger = {
       photo: photo.value,
     });
     form.reset();
+    this.renderUi();
   },
   renderUi: function () {
-    this.users.forEach(function (user) {});
+    document.querySelector(".users").innerHTML=""
+    this.users.forEach(function (user) {
+      // Create Card
+      const card = document.createElement("div");
+      card.className = "cards";
+      card.id = "card-one";
+
+      // Create Image
+      const img = document.createElement("img");
+
+      img.src = user.photo;
+      img.alt = "user.photo";
+
+      // Create h3
+      const name = document.createElement("h3");
+
+      name.textContent = user.userName;
+
+      // Create h5
+      const profession = document.createElement("h5");
+
+      profession.textContent = user.role;
+
+      // Create small
+      const description = document.createElement("small");
+      description.textContent = user.bio;
+
+      // Append elements inside card
+      card.appendChild(img);
+      card.appendChild(name);
+      card.appendChild(profession);
+      card.appendChild(description);
+
+      // Append card to body
+     
+
+      document.querySelector(".users").appendChild(card);
+    });
   },
   removeUser: function () {},
 };
