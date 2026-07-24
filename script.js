@@ -234,3 +234,9 @@
 // let newFnc=abcd.bind(obj,1,2,3);
 // newFnc();
 
+
+
+// useCase of those....
+
+
+
