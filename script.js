@@ -79,8 +79,6 @@
 // fnc(); // 1
 // fnc();
 
-
-
 // Encapsulation - \
 
 // function clickLimiter() {
@@ -135,13 +133,6 @@
 //   toaster("Arsh accepted your request");
 // }, 2000);
 
-
-
-
-
-
-
-
 //  USE  OF "THIS" keyword
 // ye ek special keyword hai jo ki function ke andar use hota hai or ye function ke context ko refer karta hai.
 // aur alag alag scop  me alag alag use ho sakta hai
@@ -159,8 +150,6 @@
 
 // function  aur global scop me this keyword window object ko refer karta hai
 
-
-
 // "this" keyword in Methods (objects)
 // Object ke andar this keyword us object ko refer karta hai jiske andar ye function call ho raha hai
 // mtlb ki usi object ke andar ke properties ko access karta hai
@@ -173,9 +162,6 @@
 //     },
 //  };
 //  obj.sayName();
-
-
-
 
 // "This" keyword in  Event Handling
 // let h1=document.querySelector("h1");
@@ -211,11 +197,11 @@
 //   },
 // };
 // obj.sayName();
-// 
-// 
-// 
-// 
-// 
+//
+//
+//
+//
+//
 //  variable access location of "this" according to  scops and value of "this"
 // global -> window
 // function -> window
@@ -227,3 +213,24 @@
 // class -> blank object
 
 // Note-> this keyword always take a value from thier parent function or mathods
+//
+//
+//
+//learn about "Manual binding" & [call,apply,bind]..................................
+// i "Call"-----
+// let obj = {
+//   name: "arsh khan",
+//   age:25
+// };
+
+// function abcd(a,b,c) {
+//   console.log(this,a,b,c);
+// }
+// // i "Call"-----
+// abcd.call(obj,1,2,3);
+// // ii "Apply"-----
+// abcd.apply(obj,[1,2,3]);
+// // iii "Bind"-----
+// let newFnc=abcd.bind(obj,1,2,3);
+// newFnc();
+
