@@ -234,9 +234,36 @@
 // let newFnc=abcd.bind(obj,1,2,3);
 // newFnc();
 
+// useCase of this ....
 
+let form = document.querySelector("form");
+let userName = document.querySelector("#name");
+let role = document.querySelector("#role");
+let bio = document.querySelector("#bio");
+let photo = document.querySelector("#photo");
+const userMananger = {
+  users: [],
+  init: function () {
+    let a = 34;
+    form.addEventListener("submit", this.submitForm.bind(this));
+  },
+  submitForm: function (e) {
+    e.preventDefault();
+    this.addUser();
+  },
+  addUser: function () {
+    this.users.push({
+      userName: userName.value,
+      role: role.value,
+      bio: bio.value,
+      photo: photo.value,
+    });
+    form.reset();
+  },
+  renderUi: function () {
+    this.users.forEach(function (user) {});
+  },
+  removeUser: function () {},
+};
 
-// useCase of those....
-
-
-
+userMananger.init();

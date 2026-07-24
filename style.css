@@ -178,7 +178,9 @@ input{
   border: 1px solid rgb(80, 78, 78);
 }
 button{
-  height: 1rem;
+  height: 1.5rem;
+  border-radius:5px ;
+  border: none;
 }
 .outer {
   margin-top: 40px;
@@ -211,9 +213,111 @@ h3 {
 h5 {
   display: inline-block;
   margin-top: -20px;
+  font-size: 11px;
 }
 small {
   width: 12rem;
   display: inline-block;
   margin-top: -10px;
+}
+
+
+/* ==========================
+   Tablet (768px - 1024px)
+========================== */
+
+@media (max-width: 1024px) {
+
+  .main{
+    height: auto;
+    padding: 30px 0;
+  }
+
+  #forms{
+    width: 100%;
+  }
+
+  form{
+    width: 90%;
+  }
+
+  .inner-forms{
+    width: 45%;
+  }
+
+  .outer{
+    width: 90%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .cards{
+    width: 250px;
+  }
+
+}
+
+
+/* ==========================
+   Mobile (up to 767px)
+========================== */
+
+@media (max-width: 767px){
+
+  .main{
+    height: auto;
+    padding: 20px 10px;
+  }
+
+  #forms{
+    width: 100%;
+  }
+
+  form{
+    width: 100%;
+  }
+
+  .inner-forms{
+    width: 95%;
+    padding: 15px;
+  }
+
+  input,
+  button{
+    width: 100%;
+  }
+
+  .outer{
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .cards{
+    width: 90%;
+    max-width: 300px;
+  }
+
+  img{
+    width: 120px;
+    height: 120px;
+  }
+
+  h3{
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  h5{
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  small{
+    width: 90%;
+    text-align: center;
+    line-height: 1.4;
+  }
+
 }
