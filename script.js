@@ -236,71 +236,90 @@
 
 // useCase of this ....
 
-let form = document.querySelector("form");
-let userName = document.querySelector("#name");
-let role = document.querySelector("#role");
-let bio = document.querySelector("#bio");
-let photo = document.querySelector("#photo");
-const userMananger = {
-  users: [],
-  init: function () {
-    form.addEventListener("submit", this.submitForm.bind(this));
-  },
-  submitForm: function (e) {
-    e.preventDefault();
-    this.addUser();
-  },
-  addUser: function () {
-    this.users.push({
-      userName: userName.value,
-      role: role.value,
-      bio: bio.value,
-      photo: photo.value,
-    });
-    form.reset();
-    this.renderUi();
-  },
-  renderUi: function () {
-    document.querySelector(".users").innerHTML=""
-    this.users.forEach(function (user) {
-      // Create Card
-      const card = document.createElement("div");
-      card.className = "cards";
-      card.id = "card-one";
+// let form = document.querySelector("form");
+// let userName = document.querySelector("#name");
+// let role = document.querySelector("#role");
+// let bio = document.querySelector("#bio");
+// let photo = document.querySelector("#photo");
+// const userMananger = {
+//   users: [],
+//   init: function () {
+//     form.addEventListener("submit", this.submitForm.bind(this));
+//   },
+//   submitForm: function (e) {
+//     e.preventDefault();
+//     this.addUser();
+//   },
+//   addUser: function () {
+//     this.users.push({
+//       userName: userName.value,
+//       role: role.value,
+//       bio: bio.value,
+//       photo: photo.value,
+//     });
+//     form.reset();
+//     this.renderUi();
+//   },
+//   renderUi: function () {
+//     document.querySelector(".users").innerHTML=""
+//     this.users.forEach(function (user) {
+//       // Create Card
+//       const card = document.createElement("div");
+//       card.className = "cards";
+//       card.id = "card-one";
 
-      // Create Image
-      const img = document.createElement("img");
+//       // Create Image
+//       const img = document.createElement("img");
 
-      img.src = user.photo;
-      img.alt = "user.photo";
+//       img.src = user.photo;
+//       img.alt = "user.photo";
 
-      // Create h3
-      const name = document.createElement("h3");
+//       // Create h3
+//       const name = document.createElement("h3");
 
-      name.textContent = user.userName;
+//       name.textContent = user.userName;
 
-      // Create h5
-      const profession = document.createElement("h5");
+//       // Create h5
+//       const profession = document.createElement("h5");
 
-      profession.textContent = user.role;
+//       profession.textContent = user.role;
 
-      // Create small
-      const description = document.createElement("small");
-      description.textContent = user.bio;
+//       // Create small
+//       const description = document.createElement("small");
+//       description.textContent = user.bio;
 
-      // Append elements inside card
-      card.appendChild(img);
-      card.appendChild(name);
-      card.appendChild(profession);
-      card.appendChild(description);
+//       // Append elements inside card
+//       card.appendChild(img);
+//       card.appendChild(name);
+//       card.appendChild(profession);
+//       card.appendChild(description);
 
-      // Append card to body
-     
+//       // Append card to body
 
-      document.querySelector(".users").appendChild(card);
-    });
-  },
-  removeUser: function () {},
-};
+//       document.querySelector(".users").appendChild(card);
+//     });
+//   },
+//   removeUser: function () {},
+// };
 
-userMananger.init();
+// userMananger.init();
+
+// Object Orianted
+
+function CreatePencil(name, price, color, company) {
+  this.name = name;
+  this.price = price;
+  this.color = color;
+  this.company = company;
+  this.write=function(text){
+    let h1=document.createElement("h1");
+    h1.textContent=text;
+    h1.style.color=color;
+    document.body.append(h1);
+  }
+}
+
+let pencil1 = new CreatePencil("apsara", 10, "grey", "apsara");
+let pencil2 = new CreatePencil("Natraj", 20, "red", "Natraj");
+let pencil3 = new CreatePencil("Doms", 20, "green", "Doms");
+

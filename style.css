@@ -132,6 +132,7 @@ body {
     width: auto;
   }
 } */
+/*
 * {
   margin-top: 0;
   padding: 0;
@@ -186,7 +187,7 @@ button{
   margin-top: 40px;
   display: flex;
 flex-wrap: wrap;
-  /* justify-content: space-evenly; */
+  justify-content: space-evenly; 
 
   width: 100%;
 
@@ -224,12 +225,11 @@ small {
   width: 12rem;
   display: inline-block;
   margin-top: -10px;
-}
-
+}*/
 
 /* ==========================
    Tablet (768px - 1024px)
-========================== */
+========================== 
 
 @media (max-width: 1024px) {
 
@@ -263,9 +263,9 @@ small {
 }
 
 
-/* ==========================
+ ==========================
    Mobile (up to 767px)
-========================== */
+========================== 
 
 @media (max-width: 767px){
 
@@ -325,4 +325,6 @@ small {
     line-height: 1.4;
   }
 
-}
+}*/
+
+
