@@ -353,19 +353,40 @@
 
 
 // Use of Prototype structure=>[(className).prototype.(variableName)=(value) ]
-function CreatePencil(name, price, color, company) {
-  this.name = name;
-  this.price = price;
-  this.color = color;
-  this.write=function(text){
-    let h1=document.createElement("h1");
-    h1.textContent=text;
-    h1.style.color=color;
-    document.body.append(h1);
-  }
-}
-CreatePencil.prototype.company="Arsh khan company"
+// Eg-> 1....
+// function CreatePencil(name, price, color, company) {
+//   this.name = name;
+//   this.price = price;
+//   this.color = color;
+//   this.write=function(text){
+//     let h1=document.createElement("h1");
+//     h1.textContent=text;
+//     h1.style.color=color;
+//     document.body.append(h1);
+//   }
+// }
+// CreatePencil.prototype.company="Arsh khan company"
 
-let pencil1 = new CreatePencil("apsara", 10, "grey", "apsara");
-let pencil2 = new CreatePencil("Natraj", 20, "red", "Natraj");
-let pencil3 = new CreatePencil("Doms", 20, "green", "Doms");
+// let pencil1 = new CreatePencil("apsara", 10, "grey", "apsara");
+// let pencil2 = new CreatePencil("Natraj", 20, "red", "Natraj");
+// let pencil3 = new CreatePencil("Doms", 20, "green", "Doms");
+
+
+// Eg-> 2....(yaha prototype me write naam ka method create ho rha hia jo ki ek permanent memorise kar rha hai )
+// prototype me ham koi bhi method banaye to wo default method ke rup me kaam karta hai. har naye object me wo maujud rahega aur ham  jo normal mathod banate hai to manual hota hai jab object banao to method ko bhi usi ke andar create karo...
+
+
+// function CreatePencil(name, price, color, company) {
+//   this.name = name;
+//   this.price = price;
+//   this.color = color;
+//   }
+// CreatePencil.prototype.write=function(text){
+//     let h1=document.createElement("h1");
+//     h1.textContent=text;
+//     h1.style.color=this.color;
+//     document.body.append(h1);}
+
+// let pencil1 = new CreatePencil("apsara", 10, "grey", "apsara");
+// let pencil2 = new CreatePencil("Natraj", 20, "red", "Natraj");
+// let pencil3 = new CreatePencil("Doms", 20, "green", "Doms");
