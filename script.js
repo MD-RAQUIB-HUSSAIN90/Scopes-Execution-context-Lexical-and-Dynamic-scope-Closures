@@ -350,3 +350,22 @@
 
 // let pencil1 = new CreatePencil("netraj", 255, "red", "netraj");
 // let pencil2 = new CreatePencil("Doms", 25, "green", "Doms");
+
+
+// Use of Prototype structure=>[(className).prototype.(variableName)=(value) ]
+function CreatePencil(name, price, color, company) {
+  this.name = name;
+  this.price = price;
+  this.color = color;
+  this.write=function(text){
+    let h1=document.createElement("h1");
+    h1.textContent=text;
+    h1.style.color=color;
+    document.body.append(h1);
+  }
+}
+CreatePencil.prototype.company="Arsh khan company"
+
+let pencil1 = new CreatePencil("apsara", 10, "grey", "apsara");
+let pencil2 = new CreatePencil("Natraj", 20, "red", "Natraj");
+let pencil3 = new CreatePencil("Doms", 20, "green", "Doms");
