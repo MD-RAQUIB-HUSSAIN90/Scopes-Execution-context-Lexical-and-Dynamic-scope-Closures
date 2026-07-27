@@ -334,3 +334,19 @@
 // let bike2=new Bikes("KTM","abc",20,"red");
 // let bike3=new Bikes("Suzuki","Baleno",15,"blue");
 
+// function CreatePencil(name, price, color, company) {
+//   this.name = name;
+//   this.price = price;
+//   this.color = color;
+//   this.companyt = company;
+//   this.rang = function (text) {
+//     let h1 = document.createElement("h1");
+//     h1.textContent = text;
+//     h1.style.color=color;
+//     document.body.append(h1);
+//   };
+
+// }
+
+// let pencil1 = new CreatePencil("netraj", 255, "red", "netraj");
+// let pencil2 = new CreatePencil("Doms", 25, "green", "Doms");
