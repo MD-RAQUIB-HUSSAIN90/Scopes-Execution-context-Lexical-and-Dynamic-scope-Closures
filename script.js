@@ -306,20 +306,31 @@
 
 // Object Orianted
 
-function CreatePencil(name, price, color, company) {
-  this.name = name;
-  this.price = price;
-  this.color = color;
-  this.company = company;
-  this.write=function(text){
-    let h1=document.createElement("h1");
-    h1.textContent=text;
-    h1.style.color=color;
-    document.body.append(h1);
-  }
-}
+// function CreatePencil(name, price, color, company) {
+//   this.name = name;
+//   this.price = price;
+//   this.color = color;
+//   this.company = company;
+//   this.write=function(text){
+//     let h1=document.createElement("h1");
+//     h1.textContent=text;
+//     h1.style.color=color;
+//     document.body.append(h1);
+//   }
+// }
 
-let pencil1 = new CreatePencil("apsara", 10, "grey", "apsara");
-let pencil2 = new CreatePencil("Natraj", 20, "red", "Natraj");
-let pencil3 = new CreatePencil("Doms", 20, "green", "Doms");
+// let pencil1 = new CreatePencil("apsara", 10, "grey", "apsara");
+// let pencil2 = new CreatePencil("Natraj", 20, "red", "Natraj");
+// let pencil3 = new CreatePencil("Doms", 20, "green", "Doms");
+
+// function Bikes(brand,model,milage,color) {
+//   this.brand=brand;
+//   this.model=model;
+//   this.milage=milage;
+//   this.color=color;
+// }
+
+// let bike1=new Bikes("yamaha","xyz",75,"blake");
+// let bike2=new Bikes("KTM","abc",20,"red");
+// let bike3=new Bikes("Suzuki","Baleno",15,"blue");
 
