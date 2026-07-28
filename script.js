@@ -415,3 +415,62 @@
 
 // let p1 = new CreatePencil("apsara", "apsara", 455, "red");
 // let p2 = new CreatePencil("natraj", "natraj", 765, "blue");
+
+//
+//
+//
+// Now we will leanr about (inheritence)...................
+
+class User {
+  constructor(name, address, username, email) {
+    this.name = name;
+    this.address = address;
+    this.username = username;
+    this.email = email;
+    this.roll = "user";
+  }
+
+  checkRole(){
+    console.log(`You are a ${this.role}`);
+    
+  }
+  write(text) {
+    let h1 = document.createElement("h1");
+    h1.textContent = `${this.name} : ${text}`;
+    document.body.append(h1);
+  }
+}
+// here is the demo of inheritence....................
+class Admin extends User {
+  constructor(name, address, username, email) {
+    super(name, address, username, email);
+    this.role = "Admin";
+  }
+  remove() {
+    document.querySelectorAll("h1").forEach((element) => {
+      element.remove();
+    });
+  }
+}
+
+let user1 = new User(
+  "Arsh khan",
+  "Sk Market Alba Colony Phulwari Sharif Patna",
+  "Khaan__Saab",
+  "karsh@gmail.com",
+  "software developer",
+);
+let user2 = new User(
+  "Samar",
+  "Milkiyana Mohalla Phulwari Sharif Patna",
+  "Mrs.Khaan__Saab",
+  "karsh@gmail.com",
+  "Arshkhan's wife",
+);
+
+let a1 = new Admin(
+  "raquib",
+  "mahatwana mohalla phulwari sharif patna",
+  "mdraquib",
+  "mdraquib1234@gmail.com",
+);
