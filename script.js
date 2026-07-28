@@ -351,7 +351,6 @@
 // let pencil1 = new CreatePencil("netraj", 255, "red", "netraj");
 // let pencil2 = new CreatePencil("Doms", 25, "green", "Doms");
 
-
 // Use of Prototype structure=>[(className).prototype.(variableName)=(value) ]
 // Eg-> 1....
 // function CreatePencil(name, price, color, company) {
@@ -371,10 +370,8 @@
 // let pencil2 = new CreatePencil("Natraj", 20, "red", "Natraj");
 // let pencil3 = new CreatePencil("Doms", 20, "green", "Doms");
 
-
 // Eg-> 2....(yaha prototype me write naam ka method create ho rha hia jo ki ek permanent memorise kar rha hai )
 // prototype me ham koi bhi method banaye to wo default method ke rup me kaam karta hai. har naye object me wo maujud rahega aur ham  jo normal mathod banate hai to manual hota hai jab object banao to method ko bhi usi ke andar create karo...
-
 
 // function CreatePencil(name, price, color, company) {
 //   this.name = name;
@@ -390,3 +387,31 @@
 // let pencil1 = new CreatePencil("apsara", 10, "grey", "apsara");
 // let pencil2 = new CreatePencil("Natraj", 20, "red", "Natraj");
 // let pencil3 = new CreatePencil("Doms", 20, "green", "Doms");
+
+//  Use of (class)...............
+
+// class CreatePencil {
+//   constructor(name, company, price, color) {
+//     this.name = name;
+//     this.company = company;
+//     this.price = price;
+//     this.color = color;
+//   }
+
+//   erase() {
+//     document.body.querySelectorAll("h1").forEach((element) => {
+//       if (element.style.color === this.color) {
+//         element.remove();
+//       }
+//     });
+//   }
+//   write(text) {
+//     let h1 = document.createElement("h1");
+//     h1.textContent = text;
+//     h1.style.color = this.color;
+//     document.body.append(h1);
+//   }
+// }
+
+// let p1 = new CreatePencil("apsara", "apsara", 455, "red");
+// let p2 = new CreatePencil("natraj", "natraj", 765, "blue");
