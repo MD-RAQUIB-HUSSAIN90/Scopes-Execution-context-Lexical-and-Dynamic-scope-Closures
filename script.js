@@ -498,3 +498,15 @@
 // let U2 = new User("samar naushad", 20, "house wife", "samar@gmail.com");
 
 // let hr = new HR("Naushad imam", 60, " human resource", "naushadimam@gmail.com");
+
+// let coffe = {
+//   color: "dark",
+//   drink: function () {
+//     console.log("gut gut gut");
+//   },
+// };
+
+// let arabiataCoffe = Object.create(coffe);
+// arabiataCoffe.taste="bitter";
+// arabiataCoffe.drink();
+
