@@ -510,3 +510,23 @@
 // arabiataCoffe.taste="bitter";
 // arabiataCoffe.drink();
 
+// Now we are going to learn about (syncronus and Asyncronus).................................
+
+// console.log("hey1");
+// console.log("hey2");
+// setTimeout   (()=>{
+// console.log("hey3");
+// },3000)
+
+// console.log("hey4");
+// console.log("hey5");
+
+// this is main function
+// function runAfterSomeTime(fnc) {
+//   setTimeout(fnc, 2000);
+// }
+
+// and here is the function which has written as argument are called (callback function)
+// runAfterSomeTime(function () {
+//   console.log("hello");
+// });
