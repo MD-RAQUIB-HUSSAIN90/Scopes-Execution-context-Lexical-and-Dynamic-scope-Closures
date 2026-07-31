@@ -512,6 +512,9 @@
 
 // Now we are going to learn about (syncronus and Asyncronus).................................
 
+// Aisa code jo line by line exeute ho use syncronus kehte hai
+// Aisa code jo specific time ke baad chale use Asyncronus khete hai.................
+
 // console.log("hey1");
 // console.log("hey2");
 // setTimeout   (()=>{
@@ -533,9 +536,20 @@
 
 // function text(fnc) {
 //     setTimeout(fnc,2000)
-  
+
 // }
 
 // text(function(){
 //     console.log("hello");
 // })
+
+
+// function kuchderBaadChalunga(val){
+//     setTimeout(()=>{
+//         console.log(val);
+        
+//     },Math.floor(Math.random()*10)*1000)
+// }
+
+
+// kuchderBaadChalunga("hello")
