@@ -505,7 +505,7 @@
 //     console.log("gut gut gut");
 //   },
 // };
-
+// THIS IS PROTOYPE INHERITENCE...........................(Use this for prototype inheritence{Object.create("passing object name ")})
 // let arabiataCoffe = Object.create(coffe);
 // arabiataCoffe.taste="bitter";
 // arabiataCoffe.drink();
@@ -530,3 +530,12 @@
 // runAfterSomeTime(function () {
 //   console.log("hello");
 // });
+
+// function text(fnc) {
+//     setTimeout(fnc,2000)
+  
+// }
+
+// text(function(){
+//     console.log("hello");
+// })
