@@ -521,7 +521,7 @@
 // console.log("hey4");
 // console.log("hey5");
 
-// this is main function
+// this is main function........................................
 // function runAfterSomeTime(fnc) {
 //   setTimeout(fnc, 2000);
 // }
