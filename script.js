@@ -530,6 +530,7 @@
 // }
 
 // and here is the function which has written as argument are called (callback function)
+// ek function me dusre fucntion ko pass kiya jata hai to us passs hue funciton(parameter me) ko callback function kehte hai......
 // runAfterSomeTime(function () {
 //   console.log("hello");
 // });
@@ -543,13 +544,38 @@
 //     console.log("hello");
 // })
 
-
 // function kuchderBaadChalunga(val){
 //     setTimeout(()=>{
 //         console.log(val);
-        
+
 //     },Math.floor(Math.random()*10)*1000)
 // }
 
-
 // kuchderBaadChalunga("hello")
+
+// Now we will learn about (Callback Hell)............
+
+function profileLekarAo(username, cb) {
+  setTimeout(() => {
+    console.log(`profile fetched of ${username}`);
+    cb({
+      _id: 1234,
+      username,
+      age: 24,
+      email: "huiihuii@huii.com",
+    });
+  }, 2000);
+}
+
+function sarePostLekarAo(id, cb) {
+  setTimeout(() => {
+    cb({ _id: id, post: ["hey", "hello", "huiyaa"] });
+  }, 2000);
+}
+profileLekarAo("arsh", function (data) {
+    console.log(data);
+    
+  sarePostLekarAo(data._id, function (posts) {
+    console.log(posts);
+  });
+});
