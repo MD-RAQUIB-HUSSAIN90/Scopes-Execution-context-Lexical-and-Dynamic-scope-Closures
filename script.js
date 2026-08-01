@@ -556,6 +556,7 @@
 // Now we will learn about (Callback Hell)............
 
 function profileLekarAo(username, cb) {
+  console.log("fetching profile of " + username);
   setTimeout(() => {
     console.log(`profile fetched of ${username}`);
     cb({
@@ -568,13 +569,14 @@ function profileLekarAo(username, cb) {
 }
 
 function sarePostLekarAo(id, cb) {
+  console.log("fetching posts for user " + id);
   setTimeout(() => {
+    
     cb({ _id: id, post: ["hey", "hello", "huiyaa"] });
   }, 2000);
 }
 profileLekarAo("arsh", function (data) {
-    console.log(data);
-    
+  console.log(data);
   sarePostLekarAo(data._id, function (posts) {
     console.log(posts);
   });
