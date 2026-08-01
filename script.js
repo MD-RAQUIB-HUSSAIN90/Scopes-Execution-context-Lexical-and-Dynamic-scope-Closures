@@ -555,29 +555,40 @@
 
 // Now we will learn about (Callback Hell)............
 
-function profileLekarAo(username, cb) {
-  console.log("fetching profile of " + username);
-  setTimeout(() => {
-    console.log(`profile fetched of ${username}`);
-    cb({
-      _id: 1234,
-      username,
-      age: 24,
-      email: "huiihuii@huii.com",
-    });
-  }, 2000);
-}
+// function profileLekarAo(username, cb) {
+//   console.log("fetching profile of " + username);
+//   setTimeout(() => {
+//     console.log(`profile fetched of ${username}`);
+//     cb({
+//       _id: 1234,
+//       username,
+//       age: 24,
+//       email: "huiihuii@huii.com",
+//     });
+//   }, 2000);
+// }
 
-function sarePostLekarAo(id, cb) {
-  console.log("fetching posts for user " + id);
-  setTimeout(() => {
-    
-    cb({ _id: id, post: ["hey", "hello", "huiyaa"] });
-  }, 2000);
-}
-profileLekarAo("arsh", function (data) {
-  console.log(data);
-  sarePostLekarAo(data._id, function (posts) {
-    console.log(posts);
-  });
-});
+// function sarePostLekarAo(id, cb) {
+//   console.log("fetching posts for user " + id);
+//   setTimeout(() => {
+//     cb({ _id: id, post: ["hey", "hello", "huiyaa"] });
+//   }, 2000);
+// }
+
+// function sareSavedPostLekarAo(id, cb) {
+//   console.log("fetching saved posts......." + id);
+//   setTimeout(() => {
+//     cb({ _id: id, saved: [1, 2, 3, 4, 5, 6, 7, 8, 9] });
+//   }, 3000);
+// }
+
+// profileLekarAo("arsh", function (data) {
+//   console.log(data);
+//   sarePostLekarAo(data._id, function (posts) {
+//     console.log(posts);
+//     sareSavedPostLekarAo(data._id, function (saved) {
+//       console.log(saved);
+//     });
+//   });
+// });
+// But now we dont study about callback hell because we have a better way to handle this problem that is (Promise) and (async/await)...........
